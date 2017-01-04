@@ -1,0 +1,51 @@
+{
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "name": "云音乐助手",
+    "description": "网易云音乐助手，全局快捷键，换歌操作，进度提示",
+    "homepage_url": "http://github.com/iwenli/music.163.com",
+    "icons": {
+        "16": "images/logo_16.png",
+        "19": "images/logo_19.png", 
+        "38": "images/logo_38.png",
+        "48": "images/logo_48.png",
+        "128": "images/logo_128.png",
+        "192": "images/logo_192.png"
+    },
+    "background": {
+      "scripts": ["js/global.js", "js/background.js"]
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "19": "images/logo_19.png",
+            "38": "images/logo_38.png",
+            "48": "images/logo_48.png"
+        },
+        "default_title": "云音乐助手" 
+    }, 
+    "content_scripts": [
+        {
+            "matches": ["*://music.163.com/*"],
+            "js": ["lib/zepto.min.js", "js/content.js"]
+        }
+    ],
+    "permissions" : [
+        "tabs",
+        "storage"
+        ],
+    "commands": {
+      "nxt": {
+        "description": "下一首",
+        "global": true
+      },
+      "prv": {
+        "description": "上一首",
+        "global": true
+      },
+      "ply": {
+        "description": "播放/暂停",
+        "global": true
+      }
+    }
+}

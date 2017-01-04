@@ -1,0 +1,191 @@
+body,html {
+    padding: 0;
+    margin: 0; 
+    height: 203px;
+    width: 500px;
+}   
+a {
+  text-decoration: none !important;
+  outline: 0;
+} 
+.g-main{
+    height: 150px;
+        overflow: hidden;
+}
+
+.g-main .m-img{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+.g-main .m-img img{
+    margin: 30px; 
+    height:90px;
+    width:90px;
+    /*css3动画无限制的旋转*/  
+    -webkit-animation: music_disc 6s linear infinite;  
+    animation: music_disc 6s linear infinite;    
+}
+.g-main .m-img .msk{
+    background: url(/images/playbar.png) no-repeat 0 9999px; 
+    background-position: 0 -277px; 
+    position: absolute;
+    width: 150px;
+    height: 150px; 
+    top:0px;
+    left:0px;
+} 
+          
+/*css3动画的旋转*/  
+@-webkit-keyframes music_disc {  
+    0% {  
+        -webkit-transform: rotate(0deg);  
+            -ms-transform: rotate(0deg);  
+                -o-transform: rotate(0deg);  
+                transform: rotate(0deg);   
+    }  
+    100% {  
+        -webkit-transform: rotate(360deg);  
+            -ms-transform: rotate(360deg);  
+                -o-transform: rotate(360deg);  
+                transform: rotate(360deg);  
+    }  
+} 
+.g-main .m-body{
+    float: left;
+    width: 300px;
+    padding: 20px 0 0 20px;
+}
+.g-main .m-body .lab{
+    background: url(/images/playbar.png) no-repeat 0 9999px; 
+    background-position: -3px -246px; 
+    width: 54px;
+    height: 24px; 
+    float:left;
+    margin-top: 4px;
+}
+.g-main .m-body .title{
+    font-size: 22px;
+    color: #333;
+    padding: 0;
+    margin: 0 0 0 70px; 
+}
+.g-main .m-body .artist-outer{ 
+    color:#999;
+}
+.g-main .m-body .artist-outer a{
+    color: #0c73c2;
+}
+
+.g-foot { 
+    height: 53px;
+    background: url(/images/playbar.png) no-repeat 0 9999px; 
+    background-position: 0 0;
+    background-repeat: repeat-x; 
+}
+
+/*play*/
+.g-foot .btns{
+    width: 137px;
+    padding: 11px 0 0 12px;
+    float: left;
+}
+.g-foot .btns div{
+    display: block;
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    margin-top: 5px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.g-foot .btns .previous{
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    background-position: 0 -130px;
+}
+.g-foot .btns .previous:hover{
+    background-position: -30px -130px;
+} 
+.g-foot .btns .play{
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+    background-position: 0 -204px;
+}
+.g-foot .btns .play:hover{ 
+    background-position: -40px -204px;
+}
+.g-foot .btns .pause{
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+    background-position: 0 -165px;
+}
+.g-foot .btns .pause:hover{
+    background-position: -40px -165px;
+}
+.g-foot .btns .next{
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    background-position: -80px -130px;
+}
+.g-foot .btns .next:hover{
+    background-position: -110px -130px;
+} 
+
+/*head image*/
+.g-foot .album-cover{
+    position: absolute;
+    margin: 12px 0 0 135px;
+}
+.g-foot .album-cover,.g-foot .album-cover img,.g-foot .album-cover span{ 
+    width: 34px;
+    height: 34px;
+    border: 0;
+}
+.g-foot .album-cover .highlight{
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 34px;
+    height: 35px;
+    background-position: 0 -80px;
+}
+
+/*time line*/
+.g-foot .progress-wrapper{ 
+    width: 300px;
+    position: absolute;
+    margin: 28px 0 0 185px;
+}
+.g-foot .progress-wrapper .barbg{
+    background: url(/images/statbar.png) no-repeat 0 9999px;
+    background-position:left 0;
+    width: 300px;
+    height: 8px;
+}
+.g-foot .progress-wrapper .barbg .rdy{
+    background: url(/images/statbar.png) no-repeat 0 9999px;
+    background-position:right -17.6px;
+    height: 8px; 
+}
+.g-foot .progress-wrapper .barbg .cur{
+    background: url(/images/statbar.png) no-repeat 0 9999px;
+    background-position: left -40px;
+    height: 8px; 
+    position: absolute;
+    top: 0;
+}
+.g-foot .progress-wrapper .barbg .cur .btn{ 
+    background: url(/images/playbar.png) no-repeat 0 9999px;
+    background-position: -4px -58px;
+    position: absolute;
+    top: -7px;
+    right: -13px;
+    width: 18px;
+    height: 18px;
+}  
